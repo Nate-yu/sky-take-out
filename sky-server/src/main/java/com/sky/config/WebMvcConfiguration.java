@@ -38,9 +38,9 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     }
 
     /**
-     * 通过knife4j生成接口文档
+     * 生成接口文档
      * @author yubin
-     * @date  19:14
+     * @date 2025/4/15 19:57
      * @return springfox.documentation.spring.web.plugins.Docket
      */
     @Bean
@@ -61,9 +61,9 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     }
 
     /**
-     * 设置静态资源映射
+     * 静态资源映射
      * @author yubin
-     * @date  19:18
+     * @date 2025/4/15 19:57
      * @param registry
      */
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
