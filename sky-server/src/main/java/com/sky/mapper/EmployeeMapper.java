@@ -36,4 +36,12 @@ public interface EmployeeMapper {
      * @return com.github.pagehelper.Page
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 根据主键动态修改属性
+     * @author yubin
+     * @date 2025/4/16 20:05
+     * @param employee
+     */
+    void update(Employee employee);
 }

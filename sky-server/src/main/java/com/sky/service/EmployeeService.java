@@ -31,4 +31,13 @@ public interface EmployeeService {
      * @return com.sky.result.PageResult
      */
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 启用或禁用员工账号
+     * @author yubin
+     * @date 2025/4/16 20:00
+     * @param status
+     * @param id
+     */
+    void startOrStop(Integer status, Long id);
 }
