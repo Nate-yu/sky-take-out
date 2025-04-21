@@ -11,6 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author yubin
  * @date 2025年04月20日 14:23
@@ -53,5 +55,19 @@ public class DishController {
         log.info("分页查询菜品:{}", dishPageQueryDTO);
         PageResult pageResult = dishService.page(dishPageQueryDTO);
         return Result.success(pageResult);
+    }
+    /**
+     * 批量删除菜品
+     * @author yubin
+     * @date 2025/4/21 21:21
+     * @param ids
+     * @return com.sky.result.Result
+     */
+    @DeleteMapping
+    @ApiOperation("批量删除菜品")
+    public Result delete(@RequestParam List<Long> ids) {
+        log.info("批量删除菜品:{}", ids);
+        dishService.deleteBatch(ids);
+        return Result.success();
     }
 }
