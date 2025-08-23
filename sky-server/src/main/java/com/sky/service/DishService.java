@@ -4,6 +4,7 @@ import com.sky.dto.DishDTO;
 import com.sky.dto.DishPageQueryDTO;
 import com.sky.entity.Dish;
 import com.sky.result.PageResult;
+import com.sky.result.Result;
 import com.sky.vo.DishVO;
 
 import java.util.List;
@@ -62,4 +63,13 @@ public interface DishService {
      * @return java.util.List<com.sky.vo.DishVO>
      */
     List<DishVO> listWithFlavor(Dish dish);
+
+    /**
+     * 菜品启售停售
+     * @author yubin
+     * @date 2025/8/23 11:01
+     * @param status
+     * @param id
+     */
+    void startOrStop(Integer status, Long id);
 }
