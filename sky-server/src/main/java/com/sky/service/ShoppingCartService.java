@@ -28,4 +28,12 @@ public interface ShoppingCartService {
      * @date 2025/8/23 15:46
      */
     void cleanShoppingCart();
+
+    /**
+     * 删除购物车中的一个商品
+     * @author yubin
+     * @date 2025/8/23 15:51
+     * @param shoppingCartDTO
+     */
+    void subShoppingCart(ShoppingCartDTO shoppingCartDTO);
 }
